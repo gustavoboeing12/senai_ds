@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gustavo_f_boeing"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-16 04:47:10 "/>
+        <attribute name="created" value="Z3VzdGF2b19mX2JvZWluZztTTi0zNTQyMDg7MjAyNC0wOC0xNjsiMDE6NTM6NTYgIjszNDEx"/>
+        <attribute name="edited" value="Z3VzdGF2b19mX2JvZWluZztTTi0zNTQyMDg7MjAyNC0wOC0xNjsiMDQ6NDc6MTAgIjsxMzszNTY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, R" type="Integer" array="False" size=""/>
+            <output expression="&quot;Informe um n&#250;mero&quot;" newline="True"/>
+            <input variable="N"/>
+            <assign variable="R" expression="N*2"/>
+            <output expression="&quot;O dobro do seu n&#250;mero &#233; &quot; &amp;R" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

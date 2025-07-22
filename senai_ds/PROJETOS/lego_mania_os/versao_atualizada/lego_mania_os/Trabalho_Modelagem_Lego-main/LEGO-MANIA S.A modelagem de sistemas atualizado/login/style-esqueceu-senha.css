@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #ededed;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  background: url("h");
+  background-position: center;
+}
+
+.form-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 70px;
+  width: 450px;
+  height: 397px;
+  background: #cfcbcb;
+  border-radius: 25px;
+}
+
+.form-wrapper h2 {
+  color: #000;
+  font-size: 2rem;
+  text-align: center;
+  transform: translateY(-65%);
+}
+
+.form-control-email {
+  height: 50px;
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.form-control-email input {
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #000;
+  font-size: 1rem;
+  padding: 0 20px;
+  text-align: center;
+  transform: translateY(-45%);
+}
+
+.form-control-email label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #8c8c8c;
+}
+
+.form-control-email input:focus ~ label,
+.form-control-email input:valid ~ label {
+  font-size: 0.75rem;
+  transform: translateY(-130%);
+}
+
+form button {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1rem;
+  background: #000000;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+form button:hover {
+  background: #c40812;
+}
+
+.tradetef {
+  display: block;
+  transform: translateY(-180%);
+  text-align: center;
+  color: #350707;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.tradetef:hover {
+  text-decoration: underline;
+}
+
+.voltarbutton {
+  display: flex; /* Usando flexbox para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 10px 20px;
+  width: 310px;
+  height: 45px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 20px auto 0;
+  font-size: 1rem; /* Ajuste o tamanho da fonte se necessário */
+}
+
+.voltarbutton:hover {
+  background-color: #c40812;
+  color: #000000;
+}

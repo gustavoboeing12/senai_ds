@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário Cadastro de peças</title>
+  <link rel="stylesheet" href="../AtividadeFormulárioSA_comCSS/ESTILOSO.CSS" />
+  <style type="text/css">
+    ul{
+        list-style-type: none; /*Tira as bolinhas padrão*/
+        margin:0px; /*Remove espaçamentos*/
+        padding:0px; /*Remove espaçamentos*/
+        overflow: hidden; /*Evita que o conteúdo ultrapasse o tamanho da caixa*/
+        background-color: rgb(48, 48, 48); /*Define a cor de fundo*/ 
+    }
+    li{
+        float:left; /*Os itens vão ficar um do lado do outro, tipo um menu horizontal*/
+    }
+    li a, .dropbtn{
+        display: inline-block;
+        color:white;
+        text-align:center;
+        padding:14px 16px;
+        text-decoration:none;
+    }
+    li a:hover, .dropdown:hover .dropbtn{
+        background-color: rgb(54, 54, 54);
+    }
+    li .dropdown{
+        display:inline-block;
+    }
+    .dropdown-content{
+        display:none;
+        position:absolute;
+        background-color: rgb(138, 138, 138);
+        min-width: 100px;
+        box-shadow:0px 8px 16px 0px(0,0,0,0.2);
+        z-index:1;
+    }
+    .dropdown-content a{
+        color:black;
+        padding:12px 16px;
+        text-decoration:none;
+        display:block;
+        text-align:left;
+    }
+    .dropdown-content a:hover{
+        background-color: rgb(179, 179, 179);
+
+    }
+    .dropdown:hover .dropdown-content{
+        display:block;
+    }
+</style>
+  </head>
+  <body bgcolor="efeae2">
+    <ul>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Cadastros</a>
+            <div class="dropdown-content">
+                <a href="Atividade_Legal.html">Cliente</a>
+                <a href="at_tabela_sa.html">Funcionário</a>
+                <a href="formularioSA_css.html">Peças do estoque</a>
+                <a href="forms_css_sa.html">Fornecedor</a>
+            </div>
+        </li>
+     </ul> 
+    <center> <font face="Arial Black">
+     <form>
+         <table border align="center", cellspacing="3" class="tabela_form">
+             <tr class="form-group">
+                 <td rowspan="2"><image src="../AtividadeFormulárioSA_comCSS/Tela Inicial.png" height="80" width="100" class="imagem" ></image> </td>
+                 <th colspan="2" rowspan="2"><h2 class="textopecas">Cadastro de peças</h2></th>
+             </tr>
+         <tr class="form-group">
+         </tr>
+         <tr class="form-group">
+             <td> Peça:</td>
+             <td> <input type="text" name="nome_peça" placeholder="nome da peça"></td>
+         </tr>
+         <tr class="form-group">
+             <td class="data">Data:</td>
+             <td><input type="date" name="data_receb" placeholder="dd/mm/aa" class="data"></td>
+ 
+         </tr>
+ 
+         <tr class="form-group">
+             <td>Quantidade</td>
+             <td><input type="number" name="quantidade_peca" placeholder="Ex: 22"></td>
+ 
+         </tr>
+ 
+         <tr class="form-group">
+             <td>Tipo:
+             </td>
+             <td><input type="text" name="tipo_peca" placeholder="Tipo pertencente"></td>
+         </tr>
+         <tr class="form-group">
+             <td>Valor:
+             </td>
+             <td><input type="number" name="Valor_peca" placeholder="Ex: 59,99R$"></td>
+         </tr>
+         <tr class="form-group">
+             <td>Fornecedor:
+             </td>
+             <td><input type="text" name="fornecedor_peca" placeholder="Ex: Zézinho" class=""></td>
+         </tr>
+
+ 
+     </table>
+
+     <input type="reset" class="btn1" value="Limpar"></input>
+     <input type="submit" value="Cadastrar" class="btn2"></input>
+     </form>
+     <footer class="tag">
+     <tag><br><br><br> João Vitor Atanazio | Estudante em Técnico de Desenvolvimento de Sistemas </tag>
+    </footer>
+ </center>
+ </font>
+ </body>
+ </html>

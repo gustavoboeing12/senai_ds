@@ -1,0 +1,38 @@
+ATIVIDADE DE BD SOBRE CLIENTE E PRODUTO
+
+1
+create database Gustavo_Boeing_At12
+
+2
+create table cliente(
+   cpf integer not null,
+   nome varchar(48),
+   rua varchar(30),
+   numero integer,
+   bairro varchar(30),
+   cidade varchar(20),
+   uf char(2),
+   sexo char(1),
+   profissao varchar(50),
+constraint pk_cliente primary key(cpf)
+);
+
+3
+create table produto(
+   codProd integer not null,
+   descricao varchar(25),
+   lote varchar(10),
+   validade date,
+   valor decimal(10,2),
+constraint pk_produto primary key (codProd)
+);
+
+4
+create table compra(
+   codCompra integer not null,
+   cpf integer,
+   dataCompra date,
+   tipoPagamento char(1),
+constraint pk_compra primary key (codCompra),
+constraint fk_cpf foreign key (cpf) references cliente(cpf)
+);

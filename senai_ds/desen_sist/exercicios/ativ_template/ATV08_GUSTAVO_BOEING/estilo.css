@@ -1,0 +1,28 @@
+body{
+    overflow-y: hidden;
+}
+.cabecalho{
+    background-color: yellow;
+    height:260px;
+    border-color:black;
+    border: 1px solid black;
+}
+.sidebar{
+    background-color:rgb(111, 111, 250);
+    width:36%;
+    height: 340px;
+    border: 1px solid black;
+}
+.conteudo{
+    background-color: rgb(167, 107, 117);
+    transform: translate(480px,-343px);
+    width:63.8%;
+    height:352px;
+    border: 1px solid black;
+}
+.rodape{
+    background-color: green;
+    transform:translateY(-359px);
+    height:500px;
+    border: 1px solid black;
+}

@@ -1,0 +1,9 @@
+/*Estilização feita externamente para o arquivo html*/
+p{
+    color:white;
+    background-color: green;
+    text-align:center;
+    font-family:"Arial Narrow";
+    font-size:15pt;
+    font-weight:bold;
+  }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu formulário</title>
+    <link rel="stylesheet" href='../normalize.css'></link>
+    <style rel="stylesheet">
+        *, *:before, *:after{
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+               box-sizing: border-box;
+        }
+        .clear{clear:both;}
+        body{
+            font:18px/1.4 arial, sans-serif;
+            color:#333;
+            background:#ccc;
+        }
+        #tudo{
+            width:100%;
+            max-width: 1200px;
+            min-width:860px;
+            margin: 0 auto;
+            background:#fff;
+        }
+        h1,h2,h3,h4,h5,h6{
+            color:#036;
+        }
+        .topo_header{
+            background:#036;
+            padding:5px 20px;
+        }
+        .topo_header h1{
+            font-size:36px;
+            margin:4px 0 2px 0;
+        }
+        .topo_header a{
+            color:#fff;
+            text-decoration: none;
+        }
+        .topo_header h2{
+            font-size:20px;
+            margin:2px 0 4px 0;
+            color:#fff;
+        }
+        .principal{
+            width: 100%;
+            padding: 20px 15px;
+        }
+        .rodape{
+            background:#036;
+            color:#fff;
+            padding: 5px 0;
+            text-align:center;
+        }
+        pre{
+            font-size:14;
+        }
+        @media(max-width:1040px){
+            pre{
+                font-size:12px;
+            }
+        }
+    /*FORMULÁRIO*/
+    </style>
+</head>
+<body class="home">
+    <div id="tudo">
+        <div class="topo">
+            <header class="topo_header">
+                <hgroup>
+                    <h1>
+                        <a href="/">Formulários</a>
+                    </h1>
+                    <h2>Elementos e atributos</h2>
+                </hgroup>
+            </header>
+        </div> <!--/.topo-->
+        <div class="principal">
+            <main>
+                <section>
+                    <h1>Elementos fielset, legend, label</h1>
+                    <form action="" method="">
+                        <fieldset> <!--Faz uma sessão com borda-->
+                            <legend>Dados pessoais</legend>
+                            <p>
+                               <small>Campos com rótulo implícito</small>
+                            </p>
+                               <label>Nome:
+                                     <input type="text" name="nome">
+                               </label>
+                               <label>Sobrenome:
+                                     <input type="text" name="sobrenome">
+                               </label>
+                               <label>Email:
+                                     <input type="email" name="emaio">
+                               </label>
+                        </fieldset>
+
+                        <fieldset> <!--Faz uma sessão com borda-->
+                            <legend>Suas preferências</legend>
+                            <p>
+                               <small>Campos com rótulo explícito</small>
+                            </p>
+                               <label for="livro">Livro: </label>
+                                   <input type="text" id="livro" name="livro">
+                               <label for="filme">Filme: </label>
+                                   <input type="text" id="filme" name="filme">
+                               <label for="esporte">Esporte: </label>
+                                   <input type="text" id="esporte" name="esporte">
+                        </fieldset>
+                    </form>
+                </section>
+            </main>
+        </div><!--/.PRINCIPAL-->
+
+        <div class="rodape">
+            <footer>
+                <small>Site Desenvolvido pelo aluno <b>Gustavo Fratoni Boeing</b></small>
+            </footer>
+        </div><!--/.Rodape-->
+    </div><!--.tudo-->
+</body>
+</html>

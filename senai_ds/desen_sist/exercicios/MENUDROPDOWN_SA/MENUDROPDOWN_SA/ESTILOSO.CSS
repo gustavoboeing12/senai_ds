@@ -1,0 +1,84 @@
+
+.btn:hover{
+    background-color: #b8b5b5;
+}
+.btn1{
+    display: flex;
+    flex-direction: row;
+    width:12%;
+    background-color: #aaa;
+    border:  1px solid black;
+    padding: 0.4rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer; 
+    text-decoration: none;
+    color:black;
+    margin-right:30px;
+    transform: translate(100px, 34px);
+}
+.btn2 {
+    display: flex;
+    flex-direction: row;
+    width:12%;
+    background-color: #aaa;
+    border:  1px solid black;
+    padding: 0.4rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer; 
+    text-decoration: none;
+    color:black;
+    margin-right:30px;
+    transform: translateX(-70px);
+}
+.form-buttons {
+
+    margin-top: 1rem;
+    cursor:none;
+    width:100%;
+}
+  
+.form-group td {
+    width: 100px;
+    font-weight: bold;
+}
+.form-group input {
+    flex: 1;
+    padding: 0.4rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+.tabela_form{
+   border-color:black;
+   font-family: Arial;
+   text-align: center;
+}
+.textopecas{
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    background: linear-gradient(45deg, #c2bdbd, #3a3737, #aaa, #303030);
+    background-size: 400% 400%; /* Amplia o gradiente para permitir a animação */
+    animation: gradientAnimation 15s ease infinite;
+}
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+.botao{
+    transform: translateY(390px);
+}
+.data{
+    width:92%;
+}
+.voltar{
+
+}

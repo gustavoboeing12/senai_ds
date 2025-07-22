@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Código</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .code-input {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .code-input input {
+            width: 50px;
+            height: 60px;
+            text-align: center;
+            font-size: 24px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .btn {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background-color: #ad1616;
+        }
+        
+        .btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        .resend {
+            margin-top: 20px;
+            color: #666;
+        }
+        
+        .resend a {
+            color: #250a9c;
+            text-decoration: none;
+        }
+        
+        .resend a:hover {
+            text-decoration: underline;
+        }
+        
+        .password-fields {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .password-fields input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .error {
+            color: #f44336;
+            margin-top: 10px;
+        }
+        
+        .success {
+            color: #000000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Verifique seu email</h2>
+        <p>Enviamos um código de 6 dígitos para <span id="user-email">seu@email.com</span>. Por favor, insira-o abaixo:</p>
+        
+        <div class="code-input">
+            <input type="text" maxlength="1" id="digit1" oninput="moveToNext(1)" onkeyup="handleBackspace(1)">
+            <input type="text" maxlength="1" id="digit2" oninput="moveToNext(2)" onkeyup="handleBackspace(2)">
+            <input type="text" maxlength="1" id="digit3" oninput="moveToNext(3)" onkeyup="handleBackspace(3)">
+            <input type="text" maxlength="1" id="digit4" oninput="moveToNext(4)" onkeyup="handleBackspace(4)">
+            <input type="text" maxlength="1" id="digit5" oninput="moveToNext(5)" onkeyup="handleBackspace(5)">
+            <input type="text" maxlength="1" id="digit6" onkeyup="handleBackspace(6)">
+        </div>
+        
+        <div id="error-message" class="error"></div>
+        <div id="success-message" class="success"></div>
+        
+        <button id="verify-btn" class="btn" disabled onclick="verifyCode()">Verificar Código</button>
+        
+        <div class="resend">
+            Não recebeu o código? <a href="#" onclick="resendCode()">Reenviar</a>
+        </div>
+        
+        <div id="password-fields" class="password-fields">
+            <h3>Alterar Senha</h3>
+            <input type="password" id="new-password" placeholder="Nova senha" required>
+            <input type="password" id="confirm-password" placeholder="Confirmar nova senha" required>
+            <button id="change-password-btn" class="btn" onclick="changePassword()">Alterar Senha</button>
+        </div>
+    </div>
+
+    <script>
+        // Inicializa o EmailJS com seu User ID
+        emailjs.init('dfH4HrdmmbleK_C3W');
+        
+        // Recupera os dados do localStorage
+        const resetData = JSON.parse(localStorage.getItem('resetData'));
+        const userEmail = resetData?.email || 'seu@email.com';
+        let correctCode = resetData?.codigo || '';
+        
+        // Exibe o email do usuário
+        document.getElementById('user-email').textContent = userEmail;
+        
+        // Verifica se todos os dígitos foram preenchidos
+        function checkCodeCompletion() {
+            const digit1 = document.getElementById('digit1').value;
+            const digit2 = document.getElementById('digit2').value;
+            const digit3 = document.getElementById('digit3').value;
+            const digit4 = document.getElementById('digit4').value;
+            const digit5 = document.getElementById('digit5').value;
+            const digit6 = document.getElementById('digit6').value;
+            
+            const isComplete = digit1 && digit2 && digit3 && digit4 && digit5 && digit6;
+            document.getElementById('verify-btn').disabled = !isComplete;
+        }
+        
+        // Move para o próximo campo de entrada
+        function moveToNext(current) {
+            const currentInput = document.getElementById(`digit${current}`);
+            const nextInput = document.getElementById(`digit${current + 1}`);
+            
+            if (currentInput.value.length === 1) {
+                if (nextInput) {
+                    nextInput.focus();
+                }
+            }
+            
+            checkCodeCompletion();
+        }
+        
+        // Lida com a tecla backspace
+        function handleBackspace(current) {
+            const currentInput = document.getElementById(`digit${current}`);
+            const prevInput = document.getElementById(`digit${current - 1}`);
+            
+            if (event.key === 'Backspace' && !currentInput.value && prevInput) {
+                prevInput.focus();
+            }
+            
+            checkCodeCompletion();
+        }
+        
+        // Verifica o código inserido
+        function verifyCode() {
+            const digit1 = document.getElementById('digit1').value;
+            const digit2 = document.getElementById('digit2').value;
+            const digit3 = document.getElementById('digit3').value;
+            const digit4 = document.getElementById('digit4').value;
+            const digit5 = document.getElementById('digit5').value;
+            const digit6 = document.getElementById('digit6').value;
+            
+            const enteredCode = digit1 + digit2 + digit3 + digit4 + digit5 + digit6;
+            
+            if (enteredCode === correctCode) {
+                document.getElementById('error-message').textContent = '';
+                document.getElementById('success-message').textContent = 'Código verificado com sucesso!';
+                document.getElementById('password-fields').style.display = 'block';
+                document.getElementById('verify-btn').disabled = true;
+            } else {
+                document.getElementById('error-message').textContent = 'Código incorreto. Por favor, tente novamente.';
+                document.getElementById('success-message').textContent = '';
+            }
+        }
+        
+        // Reenvia o código usando EmailJS
+        async function resendCode() {
+            try {
+                // Gera um novo código de 6 dígitos
+                correctCode = Math.floor(100000 + Math.random() * 900000).toString();
+                
+                // Atualiza o código no localStorage
+                resetData.codigo = correctCode;
+                localStorage.setItem('resetData', JSON.stringify(resetData));
+                
+                // Envia o email usando EmailJS
+                await emailjs.send("service_blfqbtu", "template_298aq2s", {
+                    to_email: userEmail,
+                    codigo: correctCode
+                });
+                
+                alert('Um novo código foi enviado para seu email.');
+                // Limpa os campos de entrada
+                for (let i = 1; i <= 6; i++) {
+                    document.getElementById(`digit${i}`).value = '';
+                }
+                document.getElementById('digit1').focus();
+                document.getElementById('verify-btn').disabled = true;
+            } catch (error) {
+                console.error('Erro ao enviar email:', error);
+                alert('Erro ao reenviar código. Tente novamente.');
+            }
+        }
+        
+        // Altera a senha
+        function changePassword() {
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            
+            if (newPassword !== confirmPassword) {
+                alert('As senhas não coincidem. Por favor, tente novamente.');
+                return;
+            }
+            
+            if (newPassword.length < 6) {
+                alert('A senha deve ter pelo menos 6 caracteres.');
+                return;
+            }
+            
+            alert('Senha alterada com sucesso!');
+            // Limpa os dados temporários
+            localStorage.removeItem('resetData');
+            // Redireciona para a página de login
+            window.location.href = 'login.html';
+        }
+
+        // Foca no primeiro campo ao carregar a página
+        window.onload = function() {
+            document.getElementById('digit1').focus();
+        };
+    </script>
+</body>
+</html>

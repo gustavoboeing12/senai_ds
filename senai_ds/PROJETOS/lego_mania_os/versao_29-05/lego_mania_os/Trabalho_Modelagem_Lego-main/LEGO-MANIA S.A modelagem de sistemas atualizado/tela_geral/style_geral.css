@@ -1,0 +1,439 @@
+
+html, body{
+	cursor: none;
+}
+
+.custom-cursor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.custom-cursor.site-wide {
+  position: fixed;
+  pointer-events: none; /* Permite clicar através do cursor */
+  z-index: 9999; /* Garante que fique acima de tudo */
+  display: block; /* Mantém sempre visível */
+  transform: translate(-50%, -50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.pointer {
+  width: 30px;
+  height: 50px;
+  background-image: url('../tela_geral/cursor-lego.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.background-image {
+  pointer-events: none; /* Permite que o cursor seja detectado */
+}
+
+.logo-texto{
+  font-size: 130px;
+  text-align: center;
+  margin: 22%;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-texto::before{
+  content: "LEGO";
+  color: orange;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.box-bound {
+	width: 30px;
+	height: 50px;
+	background-position: top left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+  display: none;
+  position: absolute;
+  pointer-events: none;
+}
+
+.btn:hover{
+  background-color: #b8b5b5;
+}
+
+.box-bound.active {
+	width: 20px;
+	height: 55px;
+  display: block;
+}
+
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.site-wide {
+  display: block;
+}
+
+.pointer {
+  width: 30px;
+  height: 50px;
+  background-image: url('../tela_geral/img/cursor-lego.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(10px, 20px);
+
+}
+.custom-pointer {
+  width: 30px;
+  height: 30px;
+  background-image: url('https://cdn.custom-cursor.com/db/5149/arrow2908.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none; /* Inicialmente escondido */
+  transform: translate(10px, 10px);
+}
+
+/* Garantir que nenhum elemento mostre cursor padrão */
+* {
+  cursor: none !important;
+}
+
+:root {
+  --primary-color: #303030;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --light-gray: #F0EBE3;
+  --medium-gray: #bdc3c7;
+  --dark-gray: #7f8c8d;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --white: #ffffff;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F0EBE3;
+  line-height: 1.6;
+  overflow-y: hidden
+  
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 2rem 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  overflow-y: hidden;
+  flex-shrink: 0; 
+}
+
+.logo {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu button {
+  display: block;
+  width: 105%; 
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #303030 0%,  rgba(255,255,255,0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: left;
+  cursor: pointer; 
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-30px);
+}
+
+.menu button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translate(5px, -30px);
+}
+
+.menu button:hover::before {
+  left: 100%;
+}
+
+/* Efeito de clique */
+.menu button:active {
+  transform: translateY(-28px) scale(0.98);
+}
+
+/* Ícone opcional (usando pseudo-elemento) */
+.menu button::after {
+  content: '⬇';
+  position: absolute;
+  right: 1.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.menu button:hover::after {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+  overflow-y: hidden;
+  flex-grow: 1;            
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.logo_mania{
+  width: 93%;
+}
+
+.logout button {
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1.4rem;
+  border: none;
+  font-weight: 500;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-20px);
+  font-family:'Roboto', sans-serif;
+}
+
+.logout-home button {
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1.4rem;
+  border: none;
+  font-weight: 500;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translate(-20px , -689px);
+  font-family:'Roboto', sans-serif;
+}
+
+.logout-home,
+.logout {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  gap: 10px; /* Espaço entre os botões */
+  transform: translateX(-20px); /* Ajuste de posição se necessário */
+}
+
+.logout button:hover {
+  background-color:#303030 ;
+}
+  
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+  
+.btn {
+    background-color: #aaa;
+    border:  1px solid black;
+    padding: 0.7rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu_cadastros {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+  
+.btn-menu:hover {
+    background-color: gray
+}
+  
+.submenu {
+    width: 60%;
+    display: none;       
+    padding-left: 15px;   
+    overflow-y:auto;
+    display: none;
+    padding: 10px;
+    background: linear-gradient(135deg, #303030 0%,  rgba(255,255,255,0.1) 100%);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transform: translateX(20px) !important;
+    transform: translateY(-50px) !important;
+    cursor: none !important;
+    /*Efeito de animação de abertura do submenu */
+    animation: fadeIn 0.5s forwards; 
+    transform-origin: top;
+    opacity: 0;
+} 
+
+/*Efeito de animação de abertura do submenu */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(-20px); }
+}
+
+.submenu, .submenu * {
+    cursor: none !important;
+}
+
+.submenu a {
+    margin-top:0.8px;
+    margin-bottom:1px;
+    display: block;
+    padding: 3px 0;
+    text-decoration: none;
+    color: rgb(226, 220, 220);
+    transform: translateX(20px);
+    transform: translateY(0px);
+    cursor: none;
+    pointer-events: auto;
+    width: 100%;
+}
+
+.submenu a:hover {
+    background-color: #434242;
+    border-radius: 10%;
+}
+  
+.submenu.active {
+    display: block;
+    cursor: none;
+}
+  
+.submenu .box-bound {
+    display: none !important;
+}
+
+.custom-cursor.site-wide.active .pointer {
+    transform: scale(0.8);
+}
+
+.perfil button{
+  padding: 0.5rem 1.4rem;
+  border: none;
+  display: flex;
+  background-color: #F0EBE3;
+  background-image: url('https://cdn-icons-png.freepik.com/512/64/64572.png');
+  background-size: cover;
+  object-fit: contain;
+  width: 16px;
+  height: 16px;
+  gap: 8px;
+  justify-content: center;
+}
+  
+.btnsair {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: none;
+}
+
+.icon-sair {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.btnperfil {
+  width: 33px; /* Tamanho igual ao do ícone */
+  height: 33px;
+  background-image: url('https://cdn-icons-png.freepik.com/512/64/64572.png');
+  background-size: contain; /* Mantém a proporção sem cortar */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+  cursor: none;
+  flex-shrink: 0; /* Impede que o botão encolha */
+}
+
+.perfil button {
+     background-color: transparent;
+     color: white;
+     padding: 0.5rem 1.4rem;
+     border: none;
+     font-weight: 500;
+     cursor: none;
+     background-color:transparent;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     transform: translateX(-20px);
+}
+
+.perfil {
+     display: flex;
+     align-items: center;
+     gap: 16px; /* espaço entre o botão de perfil e o botão de sair */
+}
+
+.icon-perfil {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.horario{
+    transform: translateY(-50px)
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/* Todo o CSS acima é padrão para TODAS as páginas hmtl (com exceção das páginas de login).*/
+/*-----------------------------------------------------------------------------------------*/

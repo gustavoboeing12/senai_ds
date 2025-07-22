@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt JS</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+        function myFunction(){
+            var x;
+            var idade=prompt("Digite sua idade");
+            if(idade!=null){
+                x="Idade: " + idade + " anos."
+                document.getElementById("demo").innerHTML=x;
+            }
+        }
+    </script>
+</head>
+<body>
+     <p>Clique para exibir.</p>
+     <button onclick="myFunction()">Clique aqui</button>
+     <p id="demo"></p>
+
+     <center>
+        <address>
+            Gustavo Fratoni Boeing
+        </address>
+     </center>
+</body>
+</html>

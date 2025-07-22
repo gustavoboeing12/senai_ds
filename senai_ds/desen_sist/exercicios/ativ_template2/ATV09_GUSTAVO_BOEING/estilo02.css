@@ -1,0 +1,10 @@
+.titulo{
+    text-align: center;
+}
+.poema{
+    margin-left:400px;
+    color:blue;
+}
+.imagem{
+    transform:translate(670px, -290px)
+}

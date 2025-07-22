@@ -1,0 +1,50 @@
+h2, th, .nsei{
+    color: darkgoldenrod;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table{
+    background-color:antiquewhite;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid;
+    transform: translateY(105px);
+    border-color: darkgoldenrod;
+    justify-content: center;
+}
+
+tr{
+    font-size: 20px;
+}
+
+input{
+    width: 250px;
+}
+
+.botoes{
+    font-size: 14px;
+    background-color:white;
+    height: 30px;
+    width: 90px;
+    transform: translateX(40px);
+    margin-top: 15px;
+    color: darkgoldenrod;
+    border-radius: 5px;
+}
+
+.botoes:hover{
+    color: black;
+}
+
+body{
+    background-image: url('../CSS/img/legol.jpg');
+}
+
+.nsei{
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: darkgoldenrod;
+  }

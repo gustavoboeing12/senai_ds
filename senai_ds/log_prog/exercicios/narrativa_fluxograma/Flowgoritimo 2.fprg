@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gustavo_f_boeing"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-16 04:16:36 "/>
+        <attribute name="created" value="Z3VzdGF2b19mX2JvZWluZztTTi0zNTQyMDg7MjAyNC0wOC0xNjsiMDE6NTM6NTYgIjszNDEx"/>
+        <attribute name="edited" value="Z3VzdGF2b19mX2JvZWluZztTTi0zNTQyMDg7MjAyNC0wOC0xNjsiMDQ6MTY6MzYgIjs1OzM1MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="M, S" type="Integer" array="False" size=""/>
+            <output expression="&quot;Informar o n&#250;mero de minutos&quot;" newline="True"/>
+            <input variable="M"/>
+            <assign variable="S" expression="m*60"/>
+            <output expression="&quot;O resultado em segundos &#233; &quot; &amp;S" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

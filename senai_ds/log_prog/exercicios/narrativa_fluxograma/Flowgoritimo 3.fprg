@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gustavo_f_boeing"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-16 04:20:20 "/>
+        <attribute name="created" value="Z3VzdGF2b19mX2JvZWluZztTTi0zNTQyMDg7MjAyNC0wOC0xNjsiMDE6NTM6NTYgIjszNDEx"/>
+        <attribute name="edited" value="Z3VzdGF2b19mX2JvZWluZztTTi0zNTQyMDg7MjAyNC0wOC0xNjsiMDQ6MjA6MjAgIjs2OzM1MTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="L, A, R" type="Integer" array="False" size=""/>
+            <output expression="&quot;Declare o valor da largura do ret&#226;ngulo&quot;" newline="True"/>
+            <input variable="L"/>
+            <output expression="&quot;Declare o valor da altura&quot;" newline="True"/>
+            <input variable="A"/>
+            <assign variable="R" expression="L*A"/>
+            <output expression="&quot;O resultado &#233; &quot; &amp;R" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

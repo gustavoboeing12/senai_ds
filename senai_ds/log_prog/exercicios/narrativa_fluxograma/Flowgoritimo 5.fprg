@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gustavo_f_boeing"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-16 04:52:24 "/>
+        <attribute name="created" value="Z3VzdGF2b19mX2JvZWluZztTTi0zNTQyMDg7MjAyNC0wOC0xNjsiMDE6NTM6NTYgIjszNDEx"/>
+        <attribute name="edited" value="Z3VzdGF2b19mX2JvZWluZztTTi0zNTQyMDg7MjAyNC0wOC0xNjsiMDQ6NTI6MjQgIjsxNDszNTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="P, R, T, A" type="Integer" array="False" size=""/>
+            <output expression="&quot;Informe o valor do tempo em anos do investimento&quot;" newline="True"/>
+            <input variable="T"/>
+            <output expression="&quot;Informe o valor do capital inicial&quot;" newline="True"/>
+            <input variable="P"/>
+            <output expression="&quot;Informe a taxa de juros ao ano&quot;" newline="True"/>
+            <input variable="R"/>
+            <assign variable="A" expression="P*(1+R*T)"/>
+            <output expression="&quot;O valor final do investimento &#233; &quot; &amp;A" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
