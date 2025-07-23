@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão tabelas</title>
+</head>
+<body>
+    <center>
+        <h1>Alinhamento de tabela e células</h1>
+    </center>
+    <!--Cria uma tabela com uma borda de valor 1 e alinhado ao centro-->
+    <table border="1" align="center">
+      <td>Primeira célula</td> 
+      <td>Segunda célula</td> 
+      <td>Terceira célula</td> 
+
+      <tr>
+        <!--Define aonde estará o texto-->
+        <td align="center">Centro</td> 
+        <td align="left">Esquerda</td> 
+        <td align="right">Direita</td> 
+      </tr>
+      </table>
+<br>
+<br>
+     <center>
+        <!--Define o espaçamento das células em relação á tabela-->
+        <h1>Uso do CELLSPACING</h1>
+     </center>
+     <!--width aumenta a largura da TABELA-->
+     <table border="1" width="80%" cellspacing="24" align="center">
+        <tr>
+         <!--Esse width define o tamanho da célula EM RELAÇÃO Á tabela-->
+         <td width="33%" align="center">Coluna 1</td> 
+         <td width="33%" align="center">Coluna 2</td> 
+         <td width="34%" align="center">Coluna 3</td> 
+        </tr>
+     </table>
+<br>
+<br>
+      <center>
+        <!--Cellpadding define a distância do texto da célula até a tabela-->
+        <h1>Uso do CELLPADDING</h1>
+       </center>
+       <!--width aumenta a largura da TABELA-->
+       <table border="1" width="80%" cellpadding="24" align="center">
+          <tr>
+             <!--Esse width define o tamanho da célula EM RELAÇÃO Á tabela-->
+             <td width="25%" align="center">Aluno</td> 
+             <td width="30%" align="center">Professor</td> 
+             <td width="45%" align="center">Téc. Desen</td> 
+          </tr>
+       </table>
+ <br>
+ <br>      
+       <center>
+        <!--Usado para mesclar LINHAS-->
+        <h1>Uso do ROWSPAN</h1>
+       </center>
+
+       <table border="1" width="90%" cellpadding="7" align="center">
+          <tr>
+             <!--Essa rowspan define que serão mescladas 3 linhas em uma-->
+             <td width="16%" rowspan="3">3 linhas</td> 
+             <td width="16%" >L1 coluna 2</td> 
+             <td width="16%" >L1 coluna 3</td>
+             <td width="17%" >L1 coluna 4</td> 
+             <td width="17%" >L1 coluna 5</td>  
+          </tr>
+          <tr>
+            <td width="16%" >L2 coluna 2</td> 
+            <td width="16%" >L2 coluna 3</td>
+            <td width="17%" >L2 coluna 4</td> 
+            <td width="17%" >L2 coluna 5</td>  
+         </tr>
+         <tr>
+            <td width="16%" >L3 coluna 2</td> 
+            <td width="16%" >L3 coluna 3</td>
+            <td width="17%" >L3 coluna 4</td> 
+            <td width="17%" >L3 coluna 5</td>  
+         </tr>
+       </table>
+<br>
+<br>
+       <center>
+        <!--Usado para mesclar COLUNAS-->
+        <h1>Uso do COLSPAN</h1>
+       </center>
+
+       <table border="1" width="80%" cellpadding="7" align="center">
+          <tr>
+             <!--Esse colspan define que serão mescladas 3 colunas em uma-->
+             <td width="24%" colspan="3">Célula com 3 colunas</td> 
+             <td width="20%" >L1 coluna 4</td> 
+             <td width="20%" >L1 coluna 5</td>
+          </tr>
+          <tr>
+            <!--bgcolor define a cor de funco da célula em questão-->
+            <td width="16%" bgcolor="green" >L2 coluna 1</td> 
+            <td width="16%" bgcolor="blue">L2 coluna 2</td>
+            <td width="17%" bgcolor="yellow">L2 coluna 3</td> 
+            <td width="17%" colspan="2" bgcolor="red">Célula com 2 colunas</td>  
+         </tr>
+       </table>
+</body>
+</html>

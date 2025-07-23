@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo formulários 1</title>
+</head>
+<body>
+    <!--Formulários-->
+    <form method="post" action="">
+        Qual seu primeiro nome?<br>
+        <!--Texto-->
+        <input type="text" name="primeiro_nome" value="carlos" size="10" maxlength="15">
+        <br>
+        <br>
+        <!--Senhas-->
+        Insira sua senha de acesso(8 caracteres):<br>
+        <input type="password" name="sua_senha" value="xpto" size="8" maxlength="8">
+        <br>
+        <br>
+        <!--Texto oculto-->
+        Você não pode visualizar nada aqui embaixo<br>
+        <input type="hidden" name="nome_oclto" value="form12">
+        <br>
+        <br>
+        <!--Campo para textos longos-->
+        Por favor, escreva aqui suas seguestões, dúvidas e críticas:<br>
+        <textarea name="crítica" rows="3" cols="40">
+            Gostaria de obter mais informações sobre este servidor. Grato.
+        </textarea>
+        <br>
+        <br>
+        <!--Campo de opções-->
+        Onde você pretende fazer turismo nas férias<br>
+        <select name="lugares_para_ver">
+            <option>Fortaleza</option>
+            <option value="sul">Florianópolis ou Porto Alegre</option>
+            <option>Rio de janeiro</option>
+            <option selected>Brasília</option>
+            <option value="amazonia">Manaus</option>
+        </select>
+        <br>
+        <br>
+        <!--Campo de opções com limite de opções na tela(nesse caso 5)-->
+        Que facilidades de acomodação você deseja?<br>
+        <select name="opcional" multiple size="5">
+            <option>Televisão</option>
+            <option value="casal" selected>Cama de casal</option>
+            <option>Ar condicionado</option>
+            <option>fax</option>
+            <option selected>Moden V.34</option>
+            <option>Sauna</option>
+            <option>Lavanderia</option>
+            <option>Frigo-bar</option>
+        </select>
+        <br>
+        <br>
+        <!--Campo de opções podendo escolher vários ao mesmo tempo-->
+        Veículos<br>
+        <input type="checkbox" name="veiculo1" valie="Bike"/> Eu tenho uma bicicleta<br>
+        <input type="checkbox" name="veiculo2" valie="Carrp"/> Eu tenho um carro<br>
+        <input type="checkbox" name="veiculo3" valie="Boat"/> Eu tenho um barco<br>
+        <input type="submit" value="salvar"/>
+        <br>
+        <br>
+        <!--Seleção limitada a 1-->
+        Por favor selecione seu gênero:<br>
+        <input type="radio" name="gender" value="masculino"/> Masculino<br/>
+        <input type="radio" name="gender" value="feminino"/> Feminino<br/>
+        <input type="radio" name="gender" value="outro"/> Outro<br/>
+        <br>
+        <br>
+        <!--Seleção limitada a 1-->
+        Por favor selecione sua idade:<br>
+        <input type="radio" name="age" value="30"/> 0-30<br/>
+        <input type="radio" name="age" value="60"/> 31-60<br/>
+        <input type="radio" name="age" value="100"/> 61-100<br/>
+        <input type="submit" value="salvar"/>
+        <br>
+        <br>
+        <!--Campos de email e Pin(substituidos por label)-->
+        Email:<br> <input type="text" name="email"><br/>
+        Pin:<br> <input type="text" name="pin" maxlength="4"/><br/>
+        <input type="reset" value="limpar"/>
+        <input type="submit" value="salvar"/>
+    </form>
+</body>
+</html>
