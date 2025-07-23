@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo javascript - Pula</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+         // Função para distinguir de clicar em ok/cancelar
+         function funcao1(){
+          // variável X
+          var x;
+          // variável R com seu valor igual á escolha do usuário(Ok;cancelar)
+          var r=confirm("Escolha um valor!");
+          // Se r for igual a verdadeiro(nesse caso o OK)
+          if(r==true){
+            // atribuição á x
+            x="Você pressionou OK!";
+            // pegue o elemento do ID(demo) e substitua(innerHTML) pelo valor de x
+            document.getElementById("demo").innerHTML=x;
+          }
+          //senão
+          else{
+            // atribuição á x
+            x="Você pressionou cancelar!";
+            // pegue o elemento do ID(demo) e substitua(innerHTML) pelo valor de x
+            document.getElementById("demo").innerHTML=x;
+          }
+        }
+    </script>
+</head>
+<body>
+    <p>Clique no botão para exibit a caixa de confirmação.</p>
+    <!--onclick ativa o evento da função js-->
+    <Button onclick="funcao1()">Clique aqui</Button>
+    <!--Id para ser usado no JS-->
+    <p id="demo"></p>
+
+
+    <center>
+      <address>
+          Gustavo Fratoni Boeing
+      </address>
+    </center>
+</body>
+</html>
