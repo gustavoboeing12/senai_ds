@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de tabela-formulario sa</title>
+    <link rel="stylesheet" type="text/css" href="estilo_form.css">
+    <style type="text/css">
+      ul{
+          list-style-type: none; /*Tira as bolinhas padrão*/
+          margin:0px; /*Remove espaçamentos*/
+          padding:0px; /*Remove espaçamentos*/
+          overflow: hidden; /*Evita que o conteúdo ultrapasse o tamanho da caixa*/
+          background-color: rgb(48, 48, 48); /*Define a cor de fundo*/ 
+      }
+      li{
+          float:left; /*Os itens vão ficar um do lado do outro, tipo um menu horizontal*/
+      }
+      li a, .dropbtn{
+          display: inline-block;
+          color:white;
+          text-align:center;
+          padding:14px 16px;
+          text-decoration:none;
+      }
+      li a:hover, .dropdown:hover .dropbtn{
+          background-color: rgb(54, 54, 54);
+      }
+      li .dropdown{
+          display:inline-block;
+      }
+      .dropdown-content{
+          display:none;
+          position:absolute;
+          background-color: rgb(138, 138, 138);
+          min-width: 100px;
+          box-shadow:0px 8px 16px 0px(0,0,0,0.2);
+          z-index:1;
+      }
+      .dropdown-content a{
+          color:black;
+          padding:12px 16px;
+          text-decoration:none;
+          display:block;
+          text-align:left;
+      }
+      .dropdown-content a:hover{
+          background-color: rgb(179, 179, 179);
+
+      }
+      .dropdown:hover .dropdown-content{
+          display:block;
+      }
+  </style>
+</head>
+<body>
+     <ul>
+        <li class="dropdown">
+           <a href="javascript:void(0)" class="dropbtn">Cadastros</a>
+           <div class="dropdown-content">
+            <a href="Atividade_Legal.html">Cliente</a>
+            <a href="at_tabela_sa.html">Funcionário</a>
+            <a href="formularioSA_css.html">Peças do estoque</a>
+            <a href="forms_css_sa.html">Fornecedor</a>
+           </div>
+      </li>
+     </ul> 
+     <center>
+     <section>
+     <table class="formu" cellpadding="6">
+     <form method="GET" action="session.php">
+           <tr>
+              <th><img src="img/logo_mania.png" height="80" width="140"/> </th>
+              <th class="titulo" colspan="2">Cadastro de Funcionários</th>
+           </tr>
+           <tr>
+              <th align="left"> 
+                 <label>Nome:</label> 
+              </th>
+              <th>
+                 <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+              </th>
+           </tr>
+           <tr>
+              <th align="left"> 
+                 <label>CPF/CNPJ:</label> 
+              </th>
+              <th>
+                 <input type="number" name="cpf_cnpj" id="cpf_cnpj" placeholder="000-000-000-00 ou 00.000.000/0000.00" required>
+              </th>
+           </tr>
+           <tr>
+              <th align="left"> 
+                 <label>Salário:</label> 
+              </th>
+              <th>
+                 <input type="number" name="salario" id="salario" placeholder="R$0,00" required>
+              </th>
+           </tr>
+           <tr>
+              <th align="left"> 
+                 <label>CEP:</label> 
+              </th>
+              <th>
+                 <input type="number" name="cep" id="cep" placeholder="Ex:00000-000" required>
+              </th>
+           </tr>
+           <tr>
+              <th align="left"> 
+                 <label>Data de nascimento:</label> 
+              </th>
+              <th>
+                 <input type="date" name="nasci" id="nasci" placeholder="03/10/2008" required>
+              </th>
+           </tr>
+           <tr>
+              <th align="left"> 
+                 <label>Função:</label> 
+              </th>
+              <th>
+                 <select>
+                        <option>Atendente</option>
+                        <option>Estoquista</option>
+                        <option>Técnico</option>
+                        <option>Administrador</option>
+                 </select>
+
+              </th>
+           </tr>
+           <tr>
+              <th align="left"> 
+                 <label>Email:</label> 
+              </th>
+              <th>
+                 <input type="text" name="email" id="email" placeholder="exemplo@gmail.com" required> 
+              </th>
+           </tr>
+           <tr>
+              <th align="left"> 
+                 <label>Senha(login):</label> 
+              </th>
+              <th>
+                 <input type="text" name="senha" id="senha" placeholder="func123" required>
+              </th>
+           </tr>
+           <tr>
+            <th align="left"> 
+               <input type="submit" name="cadastrar" class="btn"> 
+            </th>
+            <th align="center"> 
+               <input type="reset" name="limpar" class="btn2"> 
+            </th>
+            <th align="left">
+               <button class="btn">Voltar</button> 
+            </th>
+         </tr>
+     </form>
+     </table>
+     <address>Gustavo Fratoni Boeing</address>
+     </section>
+     </center>
+</body>
+</html>
