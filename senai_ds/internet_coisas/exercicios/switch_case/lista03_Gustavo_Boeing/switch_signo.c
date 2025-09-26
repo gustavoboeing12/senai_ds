@@ -15,6 +15,10 @@ int main()
     
     switch(mes){
     	case 1:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     	    if(dia >= 20){
     	    	printf("Aquário");
 			} else{
@@ -22,6 +26,10 @@ int main()
 			}
     		break;
     	case 2:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 19){
     	    	printf("Peixes");
 			} else{
@@ -29,6 +37,10 @@ int main()
 			}
     		break;
     	case 3:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 21){
     	    	printf("Áries");
 			} else{
@@ -36,6 +48,10 @@ int main()
 			}
     		break;
     	case 4:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 20){
     	    	printf("Touro");
 			} else{
@@ -43,6 +59,10 @@ int main()
 			}
     		break;
     	case 5:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 21){
     	    	printf("Gêmeos");
 			} else{
@@ -50,6 +70,10 @@ int main()
 			}
     		break;
     	case 6:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 22){
     	    	printf("Câncer");
 			} else{
@@ -57,6 +81,10 @@ int main()
 			}
     		break;
     	case 7:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 23){
     	    	printf("Leão");
 			} else{
@@ -64,6 +92,10 @@ int main()
 			}
     		break;
     	case 8:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 23){
     	    	printf("Virgem");
 			} else{
@@ -71,6 +103,10 @@ int main()
 			}
     		break;
     	case 9:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 23){
     	    	printf("Libra");
 			} else{
@@ -78,6 +114,10 @@ int main()
 			}
     		break;
     	case 10:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 23){
     	    	printf("Escorpião");
 			} else{
@@ -85,6 +125,10 @@ int main()
 			}
     		break;
     	case 11:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 22){
     	    	printf("Sagitário");
 			} else{
@@ -92,6 +136,10 @@ int main()
 			}
     		break;
     	case 12:
+    		if(dia <= 0 || dia > 31){
+    			printf("Dia inválido!");
+    			break;
+		    }
     		if(dia >= 22){
     	    	printf("Capricórnio");
 			} else{
