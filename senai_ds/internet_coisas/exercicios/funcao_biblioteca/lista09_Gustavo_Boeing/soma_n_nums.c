@@ -3,7 +3,7 @@
 #include <locale.h>
 int soma_n_nums(int x, int y){
 	int soma = 0;
-	if(y => x){
+	if(y >= x){
 		printf("Soma = 0");
 	} else{
 		while(x > y){
@@ -12,7 +12,6 @@ int soma_n_nums(int x, int y){
 		}
 	}
 	printf("Soma = %d",soma);
-	return soma;
 }
 int main()
 {
