@@ -1,0 +1,19 @@
+COMPONENTES DISPONÍVEIS(SENAI):
+
+resistor
+led
+chave momentânea 
+buzzer
+diodo laser
+sensor de luz
+potenciômetro
+sensor de temp/hum dht11
+led RGB
+display 7 seg
+circuito integrado 45 11
+sensor ultrassonico hcsrc4
+microsservo
+placa esq 32
+placa Arduino
+sensor de nível da água
+display oled
