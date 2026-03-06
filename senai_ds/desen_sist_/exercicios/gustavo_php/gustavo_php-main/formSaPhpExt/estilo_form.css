@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(241, 229, 229);
+    font-family: sans-serif;
+}
+.formu{
+    border-radius:5px;
+    background-color: rgb(179, 179, 179);
+}
+.btn{
+    background-color: gray;
+    border-radius: 5px;
+    border-style:calc(10px);
+    width:80px;
+    height:30px;
+}
+.btn2{
+    background-color: gray;
+    border-radius: 5px;
+    border-style:calc(10px);
+    width:80px;
+    height:30px;
+    transform:translateX(-26px)
+}
+.titulo{
+    font-size:25px;
+    width:0px;
+    background-color: rgb(151, 147, 147);
+    text-decoration:underline;
+}
