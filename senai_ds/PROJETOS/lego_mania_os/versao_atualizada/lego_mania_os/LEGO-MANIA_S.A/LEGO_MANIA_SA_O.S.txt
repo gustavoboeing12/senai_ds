@@ -1,0 +1,16 @@
+LEGO_MANIA_SA_O.S
+
+Funcionalidades a serem arrumadas/feitas:
+
+
+
+- Pesquisar ordens no pagamento não otimizada(jeito do Sérgio); ----------- Márcio estupradores
+
+- Não é possível alterar forma de pagamento de ordens concluídas; ----------- Márcio estupradores
+
+- PHP e JAVAs internos, se der tempo separar em arquivos externos; Gustavo
+
+- Não tem como conferir a senha do usuário; ----------- Atanazio
+
+- Casos de documentação; ----------- Atanazio/Márcio estupradores
+

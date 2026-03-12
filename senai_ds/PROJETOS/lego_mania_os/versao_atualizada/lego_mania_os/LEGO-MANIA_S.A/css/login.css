@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-y: hidden;
+    text-decoration: none !important;
+}
+.novo_usuario{
+    text-decoration: none !important;
+    color: white !important;
+}

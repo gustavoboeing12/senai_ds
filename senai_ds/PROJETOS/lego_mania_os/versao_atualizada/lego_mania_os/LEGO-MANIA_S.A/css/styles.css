@@ -1,0 +1,6 @@
+.table{
+    table-layout: fixed !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+
+}
